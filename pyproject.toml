@@ -1,0 +1,25 @@
+[project]
+name = "qweather-api-demo"
+version = "0.1.0"
+description = "和风天气 API 演示项目"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "QWeather Demo", email = "dev@example.com" }]
+
+dependencies = [
+  "requests>=2.31.0",
+  "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "pytest-cov>=4.1.0",
+  "responses>=0.25.0",
+  "mypy>=1.8.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q --cov=src/qweather_client --cov-report=term-missing --cov-fail-under=90"
+testpaths = ["tests"]
+
