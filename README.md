@@ -82,28 +82,6 @@ uv run pytest
 uv run mypy src
 ```
 
-## Git 管理与推送指南
-
-- 已提供标准 `.gitignore`，确保 `.env`、虚拟环境与本地构建产物不被提交。
-- 已添加 `.gitattributes` 保持跨平台行尾一致（源码统一 LF）。
-- 如误将 `.env` 加入暂存区，可执行：
-  ```powershell
-  git rm --cached .env
-  ```
-- 推荐推送前进行质量检查：
-  ```powershell
-  uv run pytest
-  uv run mypy src
-  ```
-- 推送到 GitHub（示例）：
-  ```powershell
-  git init
-  git add .
-  git commit -m "feat: 初始化 QWeather 演示项目"
-  git branch -M main
-  git remote add origin https://github.com/<your-user>/<your-repo>.git
-  git push -u origin main
-  ```
 
 ## 许可与归因
 
